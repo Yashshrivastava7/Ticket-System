@@ -55,9 +55,15 @@ function App() {
           >
             <div className="modal-content">
               <h2 ref={(_subtitle) => (subtitle = _subtitle)}>Hello</h2>
-              <input type="text" onChange={handleChange}></input>
-              <button onClick={addTicket}>Add</button>
-              <button onClick={closeModal}>Close</button>
+              <input
+                type="text"
+                placeholder="Ticket"
+                onChange={handleChange}
+              ></input>
+              <div className="button-holder">
+                <button onClick={addTicket}>Add</button>
+                <button onClick={closeModal}>Close</button>
+              </div>
             </div>
           </Modal>
         </div>

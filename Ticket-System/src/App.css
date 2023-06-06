@@ -12,10 +12,6 @@
   justify-content: space-between;
 }
 
-.read-the-docs {
-  color: #888;
-}
-
 .modal-content {
   display: flex;
   flex-direction: column;
@@ -24,11 +20,18 @@
 }
 
 .modal-content > input {
+  color: black;
+  font-weight: 0.8rem;
+  background-color: whitesmoke;
   min-width: 20rem;
   padding: 0.5rem;
   margin: 1rem;
 }
 
-.modal-content > button {
+input:focus {
+  outline: none;
+}
+
+.modal-content button {
   margin: 0.5rem;
 }
