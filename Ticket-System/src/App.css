@@ -35,3 +35,21 @@ input:focus {
 .modal-content button {
   margin: 0.5rem;
 }
+
+.history-section {
+  border: solid 2px;
+  border-radius: 0.5rem;
+  border-color: whitesmoke;
+  height: 40vh;
+  padding: 1rem;
+  width: 20%;
+  overflow-y: auto;
+}
+
+.submit {
+  border: solid 2px;
+  border-radius: 0.5rem;
+  border-color: whitesmoke;
+  padding: 1rem;
+  width: 20%;
+}

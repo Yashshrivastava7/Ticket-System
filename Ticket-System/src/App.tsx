@@ -68,6 +68,7 @@ function App() {
           </Modal>
         </div>
         <div className="history-section">
+          <h2>Tickets</h2>
           <div className="container">
             {history.length === 0 ? (
               <p>No Tickets</p>
