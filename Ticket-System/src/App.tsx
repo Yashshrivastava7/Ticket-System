@@ -17,6 +17,7 @@ Modal.setAppElement("#root");
 
 function App() {
   const [history, setHistory] = useState<string[]>([]);
+  const [ticket, setTicket] = useState<string>("");
   let subtitle;
   const [modalIsOpen, setIsOpen] = useState(false);
 
@@ -32,6 +33,12 @@ function App() {
   function closeModal() {
     setIsOpen(false);
   }
+  function handleChange(e) {
+    setTicket(e.target.value);
+  }
+  function addTicket() {
+    setHistory([ticket, ...history]);
+  }
   return (
     <>
       <h1>Ticket System</h1>
@@ -46,9 +53,12 @@ function App() {
             style={customStyles}
             contentLabel="Example Modal"
           >
-            <h2 ref={(_subtitle) => (subtitle = _subtitle)}>Hello</h2>
-            <button onClick={closeModal}>close</button>
-            <div>I am a modal</div>
+            <div className="modal-content">
+              <h2 ref={(_subtitle) => (subtitle = _subtitle)}>Hello</h2>
+              <input type="text" onChange={handleChange}></input>
+              <button onClick={addTicket}>Add</button>
+              <button onClick={closeModal}>Close</button>
+            </div>
           </Modal>
         </div>
         <div className="history-section">
