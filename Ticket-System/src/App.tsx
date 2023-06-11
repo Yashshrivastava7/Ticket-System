@@ -33,7 +33,7 @@ function App() {
   function closeModal() {
     setIsOpen(false);
   }
-  function handleChange(e) {
+  function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
     setTicket(e.target.value);
   }
   function addTicket() {
